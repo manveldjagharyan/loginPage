@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    margin: 100px auto;
+    // animation: rotateinf 1s ease-in-out infinite;
+
+    @keyframes rotateinf {
+        from {
+            rotate: 0;
+        }
+
+        to {
+            rotate: 360deg;
+        }
+    }
+
+    &:hover {
+        background-color: green;
+    }
+
+    &>h1 {
+        text-align: center;
+        font-size: 40px;
+    }
+
+
+    @media(max-width:552px) {
+        width: 100%;
+        background-color: orange;
+
+        &:hover {
+            background-color: rgb(29, 29, 29);
+        }
+    }
+
+}
+
+form {
+    width: 400px;
+    height: auto;
+    background-color: rgb(80, 99, 246);
+    border-radius: 50px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 200px auto;
+
+
+
+    @media(max-width:552px) {
+        & {
+            padding: 200px 50px;
+        }
+    }
+
+
+    &>input {
+        padding: 5px;
+        border: 0;
+        border-radius: 15px;
+        transition: .4s;
+        border: 5px solid transparent;
+        outline: none;
+
+
+        @media(max-width:552px) {
+            padding: 15px;
+
+            &::placeholder {
+                color: rgb(0, 0, 0);
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+        }
+
+
+        &:hover {
+            border: 5px solid green;
+        }
+
+        &:focus {
+            scale: 1.1;
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.41);
+        }
+    }
+
+    &>button {
+        padding: 10px 20px;
+        border: 0;
+        border-radius: 15px;
+        transition: .4s;
+
+
+        @media(max-width:552px) {
+            padding: 15px 20px;
+
+        }
+
+
+        &:hover {
+            background-color: rgb(110, 110, 243);
+            color: white;
+        }
+
+        &:active {
+            scale: 0.9;
+            background-color: rgb(37, 37, 252);
+            color: white;
+        }
+    }
+}
